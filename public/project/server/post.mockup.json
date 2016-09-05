@@ -1,0 +1,57 @@
+[{
+	"_id": {
+		"$oid": "566bd0d2a0f0feffdf334d21"
+	},
+	"title": "This is a test",
+	"youtube": "https://www.youtube.com/embed/TXP6CEWfVQc?autoplay=0",
+	"userId": "566b859ba0f0feffdf334d20",
+	"tags": [
+		"hello",
+		" world",
+		" hellow"
+	],
+	"time": {
+		"$date": "2015-12-12T07:46:26.493Z"
+	},
+	"__v": 0,
+	"author": null,
+	"shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+	"details": "Test Test\n\n\nMore More"
+},
+{
+	"_id": {
+		"$oid": "566d1844d3637fe52ef6f050"
+	},
+	"title": "Zhongxi' Test",
+	"userId": "566a3db1b804cf79580be3e7",
+	"youtube": "http://www.youtube.com/embed/EqnzwjirXLc?autoplay=0",
+	"tags": [
+		"Havergal Brian",
+		"Symphony"
+	],
+	"time": {
+		"$date": "2015-12-13T07:03:32.543Z"
+	},
+	"__v": 0,
+	"shortDescription": null,
+	"details": null
+},
+{
+	"_id": {
+		"$oid": "5671a95cc831eb5c72ab6991"
+	},
+	"title": "Emil von Reznicek - Symphony No. 1 \"Tragic\" (1902)",
+	"youtube": "http://www.youtube.com/embed/GQ3BljQnpww?autoplay=0",
+	"shortDescription": "I. Massig - Mit Majestat - 00:00\nII. Leicht Und So Schnell Als Moglich - 22:39\nIII. Zeimlich Langsam - 30:26\nIV. Zeimlich Gehalten - 44:06",
+	"details": "Reznicek studied law and music simultaneously in Graz. He did not finish his law degree, but continued to study music, his teacher being Wilhelm Mayer (also known as W. A. Rémy). Subsequently, he conducted at the theater in Graz, in Berlin and a few other places. From 1886 to 1894 he was Kapellmeister of the 88th Infantry of Prague, and it was here that he saw his greatest triumph with the premiere of Donna Diana (16 December 1894). In the spring of 1902 he settled in Berlin, touring to Russia and England from time to time. When the Nazi Party came to power in 1933, Reznicek tried not to become involved, but stayed in Berlin.\n\nReznicek was a personal friend of Richard Strauss. However, the relation between the two seems to have been an ambivalent one. Reznicek's symphonic poem Schlemihl (1912) can be seen as a direct parody of Strauss' A Hero's Life. The use of (often sarcastic) humor is a feature of much of Reznicek's music, from the jibbering Blaubart in the opera Ritter Blaubart through the sardonic Dance around the Golden Calf from Der Sieger (1913) to the expressionist Tarantella last movement of his Dance Symphony (No. 5, 1925). This Eulenspiegelei (a reference to the literary prankster Till Eulenspiegel) frequently got him into trouble in a world that was unaccustomed to the use of humour in music and art.",
+	"userId": "566a3db1b804cf79580be3e7",
+	"tags": [
+		"German",
+		"Symphony"
+	],
+	"time": {
+		"$date": "2015-12-16T18:11:40.674Z"
+	},
+	"__v": 0
+}]
+

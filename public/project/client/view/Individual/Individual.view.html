@@ -1,0 +1,128 @@
+﻿<div id="wrapper" ng-controller="individualController">
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+                <!-- Blog Post -->
+                <!-- Title -->
+                <h1> {{post.title}}</h1>
+                <!--<div class="row">
+                    <!-- Author -->
+                    <h4><a href="/home?user={{post.userId}}">by {{author}}</a>
+                    <!--Follow Button-->
+                    <small>
+                        <button class="btn btn-primary" ng-click="followThisPerson()" ng-show="followShow && existing">Follow</button>
+                        <button class="btn btn-danger" ng-click="unfollowThisPerson()" ng-show="unfollowShow && existing">UnFollow</button>
+                    </small>
+                    </h4>
+                <!--</div>-->
+                <hr>
+                <!-- Date/Time -->
+                <div class="row">
+                    <div class="col-md-5"><span class="glyphicon glyphicon-time"></span>Posted on {{post.time | date: 'medium'}}
+                    </div>
+
+                    <div class="pull-right col-md-2" ng-show="allowEdit">
+                        <button class="btn btn-default ">
+                            <a  href="/editor/{{post._id}}">
+                                Editor
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Preview Image -->
+                <iframe width="700" height="300" ng-attr-src="{{post.youtube}}"></iframe>
+
+
+                <script>
+                    $(function(){
+                        var h = $(window).height();
+                        var w = $(window).width();
+                        var iframe=$("iframe");
+                        iframe.css('height',(h < 400 || w < 700) ? 150 : 300);
+                        iframe.css('width',(h < 400 || w < 700) ? 350 : 700);
+
+                        $(window).resize(function(){
+                        var h = $(window).height();
+                        var w = $(window).width();
+                        var iframe=$("iframe");
+                            iframe.css('height',(h < 400 || w < 700) ? 150 : 300);
+                            iframe.css('width',(h < 400 || w < 700) ? 350 : 700);
+                        });
+                    });
+               </script>
+
+
+
+                <hr>
+                <!-- Post Content -->
+                <p class="lead">
+                    {{post.shortDescription}}<br>
+                </p>
+
+
+                <p>
+                    {{post.details}}<br>
+                </p>
+
+                <hr>
+                <!-- Blog Comments -->
+                <div id="disqus_thread">
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                        var disqus_shortname = 'zhongxiwangcs5610project'; // required: replace example with your forum shortname
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+
+                    <noscript>
+                        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+                    </noscript>
+                </div>
+                <!-- Comments Form -->
+
+                <hr>
+
+
+            </div>
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Tags</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled" ng-repeat="tag in tags">
+                                <li>
+                                    <a href="/home?tag={{tag}}">{{tag}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+<!--                &lt;!&ndash; Side Widget Well &ndash;&gt;
+                <div class="well">
+                    <h4>Collaborators</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                </div>-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div ng-include src="'./view/Footer/Footer.view.html' "></div>
+    </div>
+    <!-- /.container -->
+
+</div>

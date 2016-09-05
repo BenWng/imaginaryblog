@@ -1,0 +1,65 @@
+﻿<div id="wrapper", ng-controller='homeController'>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Performance Posts
+                    <!--<small>Newest to oldest</small>-->
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <div ng-repeat="post in posts">
+            <!-- Post One -->
+            <div class="row" >
+                <div class="col-md-7">
+                    <a href="#">
+                        <iframe width="550" height="300" ng-attr-src={{post.youtube}}>
+                        </iframe>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>{{post.title}}</h3>
+                    <h4>{{post.author}}</h4>
+                    <p>{{post.shortDescription}}</p>
+                    <a class="btn btn-primary" href="/individual/{{post._id}}">View Post <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+        </div>
+
+
+
+
+        <div ng-include src="'./view/Footer/Footer.view.html' "></div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+
+
+<script>
+    $(function(){
+        var h = $(window).height();
+        var w = $(window).width();
+        var iframe=$("iframe");
+        iframe.css('height',(h < 300 || w < 550) ? 150 : 300);
+        iframe.css('width',(h < 300 || w < 550) ? 350 : 550);
+
+        $(window).resize(function(){
+            var h = $(window).height();
+            var w = $(window).width();
+            var iframe=$("iframe");
+            iframe.css('height',(h < 300 || w < 550) ? 150 : 300);
+            iframe.css('width',(h < 300 || w < 550) ? 350 : 550);
+        });
+    });
+</script>

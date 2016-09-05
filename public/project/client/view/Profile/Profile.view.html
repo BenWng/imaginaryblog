@@ -1,0 +1,104 @@
+<div id="wrapper" ng-controller="profileController">
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Personal Information
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+        <!--The Personal Info Part -->
+        <div >
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <!-- The Table of the registered students-->
+                            <!--<table  class="table table-borderless">-->
+
+<!--
+                                <thead>
+                                <th class="col-xs-2">Name</th>
+                                <th class="col-xs-2">Google+ Account</th>
+                                <th class="col-xs-2">Role</th>
+                                </thead> -->
+                                <p>Name: {{currentUser.Name}}</p>
+                                <p>Google+ Account: {{currentUser.account}}</p>
+                                <p> Role: {{currentUser.role}}</p>
+
+                            <!-- The end of the table -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <!-- End of the Personal Info Part-->
+
+        <hr>
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    People You Are Following
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!--The following list Part -->
+        <div >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <!-- The Table of the registered students-->
+                        <table  class="table table-bordred table-striped">
+
+
+                            <thead>
+                            <th class="col-xs-2">Name</th>
+                            <th class="col-xs-2">Contact</th>
+                            <th class="col-xs-2">Delete</th>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="person in myPeople">
+                                <td><a href="/home?user={{person._id}}">{{person.Name}}</a></td>
+                                <td><a href="mailto:{{person.account}}"><button class="btn btn-primary btn-xs" data-title="Email"><span class="glyphicon glyphicon-envelope" ></span></button></p></a></td>
+                                <td><button class="btn btn-danger btn-xs" data-title="Delete" ng-click="deleteIdol(person)"><span class="glyphicon glyphicon-trash" ></span></button></p></td>
+
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                        <!-- The end of the table -->
+
+
+
+                        <div class="clearfix"></div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End of the Following list Part-->
+
+
+        <div ng-include src="'./view/Footer/Footer.view.html' "></div>
+    </div>
+
+
+
+    <!-- /.container -->
+
+
+</div>

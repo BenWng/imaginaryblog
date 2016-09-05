@@ -1,0 +1,74 @@
+<div id="wrapper" ng-controller="navigationController">
+<!-- Navigation -->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home">Main page</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a ng-show="currentUser" href="/home?user={{currentUser._id}}">My posts</a>
+                </li>
+
+                <li>
+                    <a ng-show="currentUser" href="/upload">New post</a>
+                </li>
+
+
+                <li>
+                    <a href="https://docs.google.com/a/husky.neu.edu/document/d/107OrKHWoYVQh77pGIlo3wFQMAJx4Wz-v9JHSCevRLdc/edit?usp=sharing">Documentation</a>
+                </li>
+
+
+
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+
+
+                         <li ng-show="currentUser"><a class="pull-middle">{{currentUser.Name}}</a></li>
+                          <li class="divider" ng-show="currentUser"></li>
+
+                        <li>
+                            <a ng-show="currentUser" href="/profile">Profile</a>
+                        </li>
+
+
+                        <li>
+                            <a ng-show="admin_navigation_show" href="/admin">Administrator Page</a>
+                        </li>
+
+
+
+                        <li><a ng-show="currentUser" ng-click='logout()' href="">Log Out</a></li>
+
+
+                        <li><a href="/oauth/google" target="_self" ng-hide="currentUser" >Log In/Register </a></li>
+                        <li><a href=" mailto:wnghan@gmail.com">Contact Adminstrator</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+           <div class="col-sm-3 col-md-3 pull-right">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" ng-model="searchText">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" ng-click='searching()'><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                </div>
+            </form>
+           </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</div>

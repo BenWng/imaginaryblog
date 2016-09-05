@@ -1,0 +1,82 @@
+<div id="wrapper" ng-controller="adminController">
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Administrator's Page
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+        <!--The Registered Students Tab -->
+        <div  id="registered">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <!-- The Table of the registered students-->
+                            <table  class="table table-bordred table-striped">
+
+
+                                <thead>
+                                <th class="col-xs-2">Name</th>
+                                <th class="col-xs-2">Google+ Account</th>
+                                <th class="col-xs-2">Role</th>
+                                <th class="col-xs-2">Edit</th>
+                                <th class="col-xs-2">Delete</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input class="form-control" ng-model="user.Name"></td>
+                                        <td><input class="form-control" ng-model="user.account"></td>
+                                        <td><input class="form-control" ng-model="user.role"></td>
+                                        <td> <button class="btn btn-success" ng-click="updateUserById(user._id,user)">Update</button></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr ng-repeat="user in users">
+                                        <td>{{user.Name}}</td>
+                                        <td>{{user.account}}</td>
+                                        <td>{{user.role}}</td>
+                                        <!--
+                                        <td><button class="btn btn-primary" ng-click="findUserById(user._id)"></button></td>
+                                        <td><button class="btn btn-danger" ng-click="deleteUserById(user._id)"></button></td>
+                                        -->
+
+                                        <td><button class="btn btn-primary btn-xs" data-title="Edit" ng-click="findUserById(user._id)"><span class="glyphicon glyphicon-pencil" ></span></button></td>
+                                        <td><button class="btn btn-danger btn-xs" data-title="Delete" ng-click="deleteUserById(user._id)"><span class="glyphicon glyphicon-trash" ></span></button></p></td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <!-- The end of the table -->
+
+
+
+                            <div class="clearfix"></div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <!-- End of the Registered Students Tab-->
+
+
+        <div ng-include src="'./view/Footer/Footer.view.html' "></div>
+    </div>
+
+
+
+    <!-- /.container -->
+
+
+</div>
